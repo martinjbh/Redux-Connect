@@ -5,8 +5,7 @@ export const initialState = {
         { "name": "Carrozas de Fuego", "priceDay": 200, "priceNight": 300 },
         { "name": "Titanic", "priceDay": 200, "priceNight": 300 },
         { "name": "Tonto y re Tonto", "priceDay": 200, "priceNight": 300 },
-    ]
-    
+    ]  
 }
 export const reducer = (state = initialState, action) => {
     switch (action.type) {

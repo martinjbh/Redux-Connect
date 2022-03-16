@@ -8,7 +8,6 @@ import * as actionsCreators from '../Actions/Actions'
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 
-
 const ModificarPrecios = ( {ModificadorDePrecios} ) => {  //siempre con llavess!!
     const [modificar, setModificar] = useState({
         "id": "",
@@ -22,7 +21,6 @@ const ModificarPrecios = ( {ModificadorDePrecios} ) => {  //siempre con llavess!
         document.getElementById("ide2").value = ""
         document.getElementById("ide3").value = ""
     }
-    
     return (
         <div className='ModificarPrecios-container-Principal'>
             <h2>ModificarPrecios</h2>
@@ -33,7 +31,6 @@ const ModificarPrecios = ( {ModificadorDePrecios} ) => {  //siempre con llavess!
         </div>
     )
 }
-
 // const mapStateToProps = (state) => ({
 //   movi:state.movies
 // })
@@ -41,5 +38,4 @@ const ModificarPrecios = ( {ModificadorDePrecios} ) => {  //siempre con llavess!
 // function mapDispatchToProps(dispatch) {
 //     return bindActionCreators(actionsCreators, dispatch)
 // }
-
 export default connect(null, { ModificadorDePrecios })(ModificarPrecios)

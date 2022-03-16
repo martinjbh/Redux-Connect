@@ -7,7 +7,6 @@ import * as actionsCreators from '../Actions/Actions';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-
 const Administrador = ({ movies, AgregarMovie }) => {
     const [movie, setMovie] = useState({
         "name": "",
@@ -25,7 +24,7 @@ const Administrador = ({ movies, AgregarMovie }) => {
         document.getElementById("ide33").value = ""
     }
     return (
-      
+    
         <div className='Administrador-container-Principal'>
             <h2>AgregarMovie</h2>
             <input id='ide' placeholder='Nueva Pelicula' onChange={event => setMovie({ ...movie, name: event.target.value })}></input>
@@ -35,8 +34,6 @@ const Administrador = ({ movies, AgregarMovie }) => {
         </div>
     )
 }
-
-
 const mapStateToProps = (state) => ({
     movies: state,
 })

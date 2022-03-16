@@ -20,7 +20,6 @@ const ShowMovies = (state) => {
                     )
                 })}
             </div>
-
         </div>
     )
 }

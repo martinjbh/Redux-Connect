@@ -9,7 +9,6 @@ export const ModificadorDePrecios = (id, movie) => {
         { type: "MODIFICAR_PRECIOS", id: id, movie: movie }
     )
 }
-
 export const Borrando = (id) => {
     return (
         { type: "BORRAR_PELICULA", id: id }

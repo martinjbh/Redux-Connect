@@ -6,7 +6,6 @@ import { Borrando } from "../Actions/Actions"
 
 const BorrarMovie = ({ movies, Borrando }) => {
     const [borrar, setBorrar] = useState()
-
     const Enviar = () => {
         Borrando(borrar)
         document.getElementById("in").value = ""
@@ -19,12 +18,10 @@ const BorrarMovie = ({ movies, Borrando }) => {
         </div>
     )
 }
-
 const mapStateToProps = (state) => {
     return {
         movies: state
     }
 };
-
 export default connect(mapStateToProps, { Borrando })(BorrarMovie)
 
