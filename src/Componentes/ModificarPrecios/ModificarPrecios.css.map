@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AACI,qCADiC,CACjC,KAAK,CAAA;EACD,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,EAAE;EACX,MAAM,EAAE,EAAE;CACb",
+    "sources": [
+        "ModificarPrecios.scss"
+    ],
+    "names": [],
+    "file": "ModificarPrecios.css"
+}

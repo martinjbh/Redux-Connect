@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
-
+import ShowMovies from './Componentes/ShowMovies/ShowMovies';
+import Administrador from './Componentes/Administrador/Administrador';
+import ModificarPrecios from './Componentes/ModificarPrecios/ModificarPrecios';
+import BorrarMovie from './Componentes/BorrarMovie/BorrarMovie';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ModificarPrecios />
+      <Administrador />
+      <BorrarMovie/>
+      <ShowMovies />
     </div>
   );
 }
