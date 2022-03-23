@@ -1,11 +1,7 @@
 import './ShowMovies.scss'
 import { connect } from 'react-redux';
-import { useState } from 'react'
+
 const ShowMovies = (state) => {
-    const [ver, setVer] = useState(true)
-    const cerrar = () => {
-        setVer(false)
-    }
     return (
         <div className='ShowMovies-Container-Movies'>
             <div className='ShowMovies-Container-Movies-map'>

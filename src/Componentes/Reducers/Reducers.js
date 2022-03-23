@@ -1,11 +1,13 @@
-export const initialState = {
+
+const initialState = {
     "movies": [
         { "name": "Volver al Futuro", "priceDay": 200, "priceNight": 300 },
         { "name": "Stars Wars", "priceDay": 200, "priceNight": 300 },
         { "name": "Carrozas de Fuego", "priceDay": 200, "priceNight": 300 },
         { "name": "Titanic", "priceDay": 200, "priceNight": 300 },
         { "name": "Tonto y re Tonto", "priceDay": 200, "priceNight": 300 },
-    ]  
+        
+    ]
 }
 export const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -27,7 +29,7 @@ export const reducer = (state = initialState, action) => {
         }
         case "BORRAR_PELICULA": {
             return ({
-                ...state, movies: state.movies.filter((e, i) => i+1 != action.id),
+                ...state, movies: state.movies.filter((e, i) => i + 1 != action.id),
             })
         }
         default:

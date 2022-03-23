@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AACI,sBADkB,CAClB,KAAK,CAAA;EACD,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,EAAE;EACX,UAAU,EAAE,EAAE;CACjB",
+    "mappings": "AAAA,AACI,sBADkB,CAClB,KAAK,CAAA;EACD,aAAa,EAAE,IAAI;EACnB,OAAO,EAAE,IAAI;EACb,UAAU,EAAE,EAAE;CACjB",
     "sources": [
         "BorrarMovie.scss"
     ],
