@@ -23,18 +23,22 @@ const ModificarPrecios = ({ ModificadorDePrecios }) => {  //siempre con llavess!
     }
     return (
         <div className='ModificarPrecios-container-Principal'>
-            <h2>ModificarPrecios</h2>
-            <input type="Number" id='ide1' onChange={event => setModificar({ ...modificar, "id": event.target.value })} placeholder="id"></input>
-            <input type="Number" id='ide2' onChange={event => setModificar({ ...modificar, "priceDayModificar": event.target.value })} placeholder="PriceDay"></input>
-            <input type="Number" id='ide3' onChange={event => setModificar({ ...modificar, "priceNightModificar": event.target.value })} placeholder="PriceNight"></input>
-            <button onClick={EnviarCambios}>Modificar</button>
+            <form onSubmit={(e) => e.preventDefault()}>
+                <h2>ModificarPrecios</h2>
+                <input type="Number" id='ide1' onChange={event => setModificar({ ...modificar, "id": event.target.value })} placeholder="id"></input>
+                <input type="Number" id='ide2' onChange={event => setModificar({ ...modificar, "priceDayModificar": event.target.value })} placeholder="PriceDay"></input>
+                <input type="Number" id='ide3' onChange={event => setModificar({ ...modificar, "priceNightModificar": event.target.value })} placeholder="PriceNight"></input>
+                <button type="submit" onClick={EnviarCambios}>Modificar</button>
+            </form>
+
         </div>
     )
 }
 // const mapStateToProps = (state) => ({
 //   movi:state.movies
 // })
-// function mapDispatchToProps(dispatch) {
-//     return bindActionCreators(actionsCreators, dispatch)
-// }
-export default connect(null, { ModificadorDePrecios })(ModificarPrecios)
+const mapDispatchToProps = {
+    ModificadorDePrecios: ModificadorDePrecios
+
+}
+export default connect(null, mapDispatchToProps)(ModificarPrecios)

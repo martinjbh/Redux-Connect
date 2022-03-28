@@ -1,19 +1,31 @@
 import { useState, useEffect } from 'react'
 import { connect } from 'react-redux'
 import * as actionsCreators from '../Actions/Actions'
+import { FetchMovie } from '../Actions/Actions'
 
-const Async = () => {
-    const [dataNueva, setDataNueva] = useState()
-    useEffect(() => {
-        fetch('http://192.168.0.12:3001/api')
-            .then(response => response.json())
-            .then(data => setDataNueva(data.movies[0].name));
-    });
+
+const Async = ({ state, FetchMovie }) => {
+    // useEffect(() => {
+    //     FetchMovie()
+    // }, []);
+// console.log(state.data)
     return (
         <div>
-         {/* {dataNueva} */}
+            {/* {state.movies.map((e, i) => {
+                return (
+                    <p key={i}>{e.name}</p>
+                )
+            })} */}
         </div>
     )
 }
+const mapStateToProps = (state) => {
+    return {
+        state: state
+    }
+}
 
-export default connect(null,actionsCreators)(Async)
+export default connect(mapStateToProps, { FetchMovie })(Async)
+
+
+

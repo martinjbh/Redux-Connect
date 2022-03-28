@@ -11,7 +11,6 @@ app.use(cors())
 // }
 // main()
 
-
 app.get('/api', (req, res) => {
     const data = {
         "movies": [

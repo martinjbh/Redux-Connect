@@ -12,15 +12,18 @@ const BorrarMovie = ({ movies, Borrando }) => {
     }
     return (
         <div className='BorrarMovie-container' >
-            <h2>BorrarMovie</h2>
-            <input id="in" type='Number' onChange={event => setBorrar(event.target.value)} placeholder="ID Borrar"></input>
-            <button onClick={Enviar}>Borrar</button>
+            <form onSubmit={(e) => e.preventDefault()}>
+                <h2>BorrarMovie</h2>
+                <input id="in" type='Number' onChange={event => setBorrar(event.target.value)} placeholder="ID Borrar"></input>
+                <button onClick={Enviar}>Borrar</button>
+            </form>
+
         </div>
     )
 }
 const mapStateToProps = (state) => {
     return {
-        movies: state
+        movies: state.movies
     }
 };
 export default connect(mapStateToProps, { Borrando })(BorrarMovie)

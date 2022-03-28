@@ -1,11 +1,18 @@
 import './ShowMovies.scss'
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import * as actionsCreators from '../Actions/Actions'
+import React, { useState, useEffect } from 'react'
+const ShowMovies = ({ movies, FetchMovie }) => {
 
-const ShowMovies = (state) => {
+    useEffect(() => {
+        FetchMovie()     //traigo FectHMovie  es un actionCreator 
+    }, [])               // q trae todas las pelis de la api a redix
+
     return (
         <div className='ShowMovies-Container-Movies'>
             <div className='ShowMovies-Container-Movies-map'>
-                {state.movies.map((v, index) => {
+                {movies.map((v, index) => {
                     return (
                         <div key={index} className='ShowMovies-Componente-Muestra'>
                             <h4>{v.name}</h4>
@@ -24,4 +31,7 @@ const mapStateToProps = (state) => {
         movies: state.movies
     }
 };
-export default connect(mapStateToProps)(ShowMovies);
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(actionsCreators, dispatch)
+}
+export default connect(mapStateToProps, mapDispatchToProps)(ShowMovies);
