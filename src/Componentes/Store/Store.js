@@ -8,4 +8,4 @@ export const store =createStore(
     applyMiddleware(Thunk)  //nos permite despacahr acciones asyncronas
     )
 
-    
+

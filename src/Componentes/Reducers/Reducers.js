@@ -1,12 +1,6 @@
 
 const initialState = {
-    "movies": [
-        // { "name": "Volver al Futuro", "priceDay": 200, "priceNight": 300 },
-        // { "name": "Stars Wars", "priceDay": 200, "priceNight": 300 },
-        // { "name": "Carrozas de Fuego", "priceDay": 200, "priceNight": 300 },
-        // { "name": "Titanic", "priceDay": 200, "priceNight": 300 },
-        // { "name": "Tonto y re Tonto", "priceDay": 200, "priceNight": 300 },
-    ],
+    "movies": [],
     data:[]
 }
 export const reducer = (state = initialState, action) => {
